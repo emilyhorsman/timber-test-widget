@@ -1,0 +1,7 @@
+<tr><td colspan="2"><b>{{ row_title }}</b></td></tr>
+{% for key, value in obj %}
+<tr>
+  <td>{{ key|e }}</td>
+  <td>{{ value|e }}</td>
+</tr>
+{% endfor %}

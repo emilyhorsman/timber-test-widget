@@ -1,0 +1,6 @@
+{
+  "name": "timber-test-widget",
+  "description": "A sample widget written with Timber.",
+  "version": "1.0.0",
+  "type": "wordpress-plugin"
+}

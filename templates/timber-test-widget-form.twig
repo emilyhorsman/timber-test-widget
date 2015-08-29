@@ -1,0 +1,5 @@
+<p>
+  <label for="{{ widget.get_field_id('title') }}">{{ __('Title: ') }}</label>
+  <input class="widefat" id="{{ widget.get_field_id('title') }}"
+         name="{{ widget.get_field_name('title') }}" type="text" value="{{ title|e }}">
+</p>
