@@ -17,8 +17,6 @@ class Timber_Test_Widget extends \WP_Widget {
       __('Timber Test Widget', self::I18N_DOMAIN),  // Name in admin panel
       array('description' => __('Sample widget written with Timber', self::I18N_DOMAIN), )
       );
-
-    \Timber::$locations[] = path_join(plugin_dir_path(__FILE__), '../templates');
   }
 
   public function widget($args, $instance) {
