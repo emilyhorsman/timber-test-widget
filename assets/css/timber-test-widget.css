@@ -1,0 +1,21 @@
+table.timber-test-widget-table {
+  width: 100%;
+}
+
+table.timber-test-widget-table thead tr {
+  background-color: #2c3e50;
+  color: white;
+}
+
+table.timber-test-widget-table tbody tr.table-title-row {
+  background-color: #34495e;
+  color: white;
+}
+
+table.timber-test-widget-table td {
+  padding: 0.5em;
+}
+
+table.timber-test-widget-table tbody tr {
+  border-bottom: 1px solid #ccc;
+}
