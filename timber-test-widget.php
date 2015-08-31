@@ -33,3 +33,40 @@ function add_theme_styles() {
   );
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\add_theme_styles');
+
+
+function init_links_options() {
+  global $links_option_identifier;
+
+  $section_identifier = 'timber_test_widget_links';
+  $section_page = 'general';
+  add_settings_section(
+    $section_identifier,
+    'Timber Test Widget Links',
+    __NAMESPACE__ . '\\links_description_callback',
+    $section_page
+  );
+
+  add_settings_field(
+    'links',
+    'Links',
+    __NAMESPACE__ . '\\links_form_callback',
+    $section_page,
+    $section_identifier
+  );
+
+  register_setting(
+    $section_page,
+    'links'
+  );
+}
+add_action('admin_init', __NAMESPACE__ . '\\init_links_options');
+
+function links_description_callback() {
+  echo '<p>Widget links</p>';
+}
+
+function links_form_callback() {
+  $context = array('links' => get_option('links'));
+  \Timber::render('timber-test-widget-links-form.twig', $context);
+}

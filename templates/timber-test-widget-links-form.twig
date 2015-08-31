@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>URL</th>
+      <th>Enabled</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" name="links[{{ links|length }}][name]"></td>
+      <td><input type="text" name="links[{{ links|length }}][url]"></td>
+      <td><input type="checkbox" name="links[{{ links|length }}][enabled]" value="1"></td>
+    </tr>
+    {% for key, row in links %}
+      {{ dump(row) }}
+      {% include '_timber-test-widget-links-row.twig' %}
+    {% endfor %}
+  </tbody>
+</table>

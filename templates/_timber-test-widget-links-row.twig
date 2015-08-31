@@ -1,0 +1,5 @@
+<tr>
+  <td><input type="text" name="links[{{ key }}][name]" value="{{ row.name|e }}"></td>
+  <td><input type="text" name="links[{{ key }}][url]" value="{{ row.url|e }}"></td>
+  <td><input type="checkbox" name="links[{{ key }}][enabled]" value="1" {{ fn('checked', 1, row.enabled, false) }}></td>
+</tr>
